@@ -2,7 +2,7 @@
 module Sbox_tb;
     reg [7:0] in ;
     wire [7:0] out;
-    Sbox uut(in,out);
+    S_box uut(in,out);
     initial begin
         $display ("time\t input \t output");
         $monitor ("%g\t %h\t\t %h",$time,in,out);
