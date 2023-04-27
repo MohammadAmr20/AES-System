@@ -1,0 +1,77 @@
+$date
+	Thu Apr 27 06:35:48 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module InvShiftRows_tb $end
+$var wire 128 ! out [127:0] $end
+$var reg 128 " in [127:0] $end
+$scope module uut $end
+$var wire 128 # data_in [127:0] $end
+$var wire 128 $ data_out [127:0] $end
+$scope begin genblk1[31] $end
+$var parameter 6 % i $end
+$upscope $end
+$scope begin genblk1[63] $end
+$var parameter 7 & i $end
+$upscope $end
+$scope begin genblk1[95] $end
+$var parameter 8 ' i $end
+$upscope $end
+$scope begin genblk1[127] $end
+$var parameter 8 ( i $end
+$upscope $end
+$scope begin genblk2[23] $end
+$var parameter 6 ) i $end
+$upscope $end
+$scope begin genblk2[55] $end
+$var parameter 7 * i $end
+$upscope $end
+$scope begin genblk2[87] $end
+$var parameter 8 + i $end
+$upscope $end
+$scope begin genblk3[79] $end
+$var parameter 8 , i $end
+$upscope $end
+$scope begin genblk3[111] $end
+$var parameter 8 - i $end
+$upscope $end
+$scope begin genblk4[39] $end
+$var parameter 7 . i $end
+$upscope $end
+$scope begin genblk4[71] $end
+$var parameter 8 / i $end
+$upscope $end
+$scope begin genblk4[103] $end
+$var parameter 8 0 i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1100111 0
+b1000111 /
+b100111 .
+b1101111 -
+b1001111 ,
+b1010111 +
+b110111 *
+b10111 )
+b1111111 (
+b1011111 '
+b111111 &
+b11111 %
+$end
+#0
+$dumpvars
+b11010100001001110001000110101110111000001011111110011000111100011011100010110100010111011110010100011110010000010101001000110000 $
+b11010100101111110101110100110000111000001011010001010010101011101011100001000001000100011111000100011110001001111001100011100101 #
+b11010100101111110101110100110000111000001011010001010010101011101011100001000001000100011111000100011110001001111001100011100101 "
+b11010100001001110001000110101110111000001011111110011000111100011011100010110100010111011110010100011110010000010101001000110000 !
+$end
+#10

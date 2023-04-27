@@ -1,14 +1,14 @@
-`include "InvSubBytes.v"
-module InvSubBytes_tb;
+`include "ShiftRows.v"
+module ShiftRows_tb;
     reg [127:0] in ;
     wire [127:0] out;
-    InvSubBytes  uut(in,out);
+    ShiftRows  uut(in,out);
     initial begin
-        $dumpfile("InvSubBytes_tb.vcd");
-        $dumpvars(0,InvSubBytes_tb);
+        $dumpfile("ShiftRows_tb.vcd");
+        $dumpvars(0,ShiftRows_tb);
         $display ("time\t input \t\t\t\t\t\t\t\t output");
         $monitor ("%g\t %h\t\t %h",$time,in,out);
-        in = 128'hD4E0B81E27BFB44111985D52AEF1E530;
+        in = 128'hD42711AEE0BF98F1B8B45DE51E415230;
         #10
         $finish;
     end

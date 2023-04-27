@@ -1,11 +1,11 @@
 `include "InvSbox.v"
-module InvSubBytes#(parameter SIZE = 128)(
-    input [SIZE-1:0] InState ,
-    output [SIZE-1:0] OutState
+module InvSubBytes(
+    input [127:0] InState ,
+    output [127:0] OutState
 );
     genvar i  ;
     generate
-        for (i = 0  ; i < SIZE ; i = i + 8) begin : Sub_Bytes
+        for (i = 0  ; i < 128 ; i = i + 8) begin : Sub_Bytes
             InvSbox uut(InState[i+7 : i],OutState[i+7:i]);
         end
     endgenerate
