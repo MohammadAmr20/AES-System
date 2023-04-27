@@ -1,0 +1,351 @@
+$date
+	Wed Apr 26 15:09:47 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module SubBytes_tb $end
+$var wire 256 ! out [255:0] $end
+$var reg 256 " in [255:0] $end
+$scope module uut $end
+$var wire 256 # InState [255:0] $end
+$var wire 256 $ OutState [255:0] $end
+$var parameter 32 % SIZE $end
+$scope begin Sub_Bytes[0] $end
+$var parameter 2 & i $end
+$scope module uut $end
+$var wire 8 ' in [7:0] $end
+$var reg 8 ( out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[8] $end
+$var parameter 5 ) i $end
+$scope module uut $end
+$var wire 8 * in [7:0] $end
+$var reg 8 + out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[16] $end
+$var parameter 6 , i $end
+$scope module uut $end
+$var wire 8 - in [7:0] $end
+$var reg 8 . out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[24] $end
+$var parameter 6 / i $end
+$scope module uut $end
+$var wire 8 0 in [7:0] $end
+$var reg 8 1 out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[32] $end
+$var parameter 7 2 i $end
+$scope module uut $end
+$var wire 8 3 in [7:0] $end
+$var reg 8 4 out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[40] $end
+$var parameter 7 5 i $end
+$scope module uut $end
+$var wire 8 6 in [7:0] $end
+$var reg 8 7 out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[48] $end
+$var parameter 7 8 i $end
+$scope module uut $end
+$var wire 8 9 in [7:0] $end
+$var reg 8 : out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[56] $end
+$var parameter 7 ; i $end
+$scope module uut $end
+$var wire 8 < in [7:0] $end
+$var reg 8 = out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[64] $end
+$var parameter 8 > i $end
+$scope module uut $end
+$var wire 8 ? in [7:0] $end
+$var reg 8 @ out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[72] $end
+$var parameter 8 A i $end
+$scope module uut $end
+$var wire 8 B in [7:0] $end
+$var reg 8 C out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[80] $end
+$var parameter 8 D i $end
+$scope module uut $end
+$var wire 8 E in [7:0] $end
+$var reg 8 F out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[88] $end
+$var parameter 8 G i $end
+$scope module uut $end
+$var wire 8 H in [7:0] $end
+$var reg 8 I out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[96] $end
+$var parameter 8 J i $end
+$scope module uut $end
+$var wire 8 K in [7:0] $end
+$var reg 8 L out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[104] $end
+$var parameter 8 M i $end
+$scope module uut $end
+$var wire 8 N in [7:0] $end
+$var reg 8 O out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[112] $end
+$var parameter 8 P i $end
+$scope module uut $end
+$var wire 8 Q in [7:0] $end
+$var reg 8 R out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[120] $end
+$var parameter 8 S i $end
+$scope module uut $end
+$var wire 8 T in [7:0] $end
+$var reg 8 U out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[128] $end
+$var parameter 9 V i $end
+$scope module uut $end
+$var wire 8 W in [7:0] $end
+$var reg 8 X out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[136] $end
+$var parameter 9 Y i $end
+$scope module uut $end
+$var wire 8 Z in [7:0] $end
+$var reg 8 [ out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[144] $end
+$var parameter 9 \ i $end
+$scope module uut $end
+$var wire 8 ] in [7:0] $end
+$var reg 8 ^ out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[152] $end
+$var parameter 9 _ i $end
+$scope module uut $end
+$var wire 8 ` in [7:0] $end
+$var reg 8 a out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[160] $end
+$var parameter 9 b i $end
+$scope module uut $end
+$var wire 8 c in [7:0] $end
+$var reg 8 d out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[168] $end
+$var parameter 9 e i $end
+$scope module uut $end
+$var wire 8 f in [7:0] $end
+$var reg 8 g out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[176] $end
+$var parameter 9 h i $end
+$scope module uut $end
+$var wire 8 i in [7:0] $end
+$var reg 8 j out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[184] $end
+$var parameter 9 k i $end
+$scope module uut $end
+$var wire 8 l in [7:0] $end
+$var reg 8 m out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[192] $end
+$var parameter 9 n i $end
+$scope module uut $end
+$var wire 8 o in [7:0] $end
+$var reg 8 p out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[200] $end
+$var parameter 9 q i $end
+$scope module uut $end
+$var wire 8 r in [7:0] $end
+$var reg 8 s out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[208] $end
+$var parameter 9 t i $end
+$scope module uut $end
+$var wire 8 u in [7:0] $end
+$var reg 8 v out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[216] $end
+$var parameter 9 w i $end
+$scope module uut $end
+$var wire 8 x in [7:0] $end
+$var reg 8 y out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[224] $end
+$var parameter 9 z i $end
+$scope module uut $end
+$var wire 8 { in [7:0] $end
+$var reg 8 | out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[232] $end
+$var parameter 9 } i $end
+$scope module uut $end
+$var wire 8 ~ in [7:0] $end
+$var reg 8 !" out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[240] $end
+$var parameter 9 "" i $end
+$scope module uut $end
+$var wire 8 #" in [7:0] $end
+$var reg 8 $" out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Sub_Bytes[248] $end
+$var parameter 9 %" i $end
+$scope module uut $end
+$var wire 8 &" in [7:0] $end
+$var reg 8 '" out [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11111000 %"
+b11110000 ""
+b11101000 }
+b11100000 z
+b11011000 w
+b11010000 t
+b11001000 q
+b11000000 n
+b10111000 k
+b10110000 h
+b10101000 e
+b10100000 b
+b10011000 _
+b10010000 \
+b10001000 Y
+b10000000 V
+b1111000 S
+b1110000 P
+b1101000 M
+b1100000 J
+b1011000 G
+b1010000 D
+b1001000 A
+b1000000 >
+b111000 ;
+b110000 8
+b101000 5
+b100000 2
+b11000 /
+b10000 ,
+b1000 )
+b0 &
+b100000000 %
+$end
+#0
+$dumpvars
+b11010100 '"
+b11001 &"
+b11100000 $"
+b10100000 #"
+b10111000 !"
+b10011010 ~
+b11110 |
+b11101001 {
+b100111 y
+b111101 x
+b10111111 v
+b11110100 u
+b10110100 s
+b11000110 r
+b1000001 p
+b11111000 o
+b10001 m
+b11100011 l
+b10011000 j
+b11100010 i
+b1011101 g
+b10001101 f
+b1010010 d
+b1001000 c
+b10101110 a
+b10111110 `
+b11110001 ^
+b101011 ]
+b11100101 [
+b101010 Z
+b110000 X
+b1000 W
+b1001001 U
+b10100100 T
+b1000101 R
+b1101000 Q
+b1111111 O
+b1101011 N
+b1110111 L
+b10 K
+b11011110 I
+b10011100 H
+b11011011 F
+b10011111 E
+b111001 C
+b1011011 B
+b10 @
+b1101010 ?
+b11010010 =
+b1111111 <
+b10010110 :
+b110101 9
+b10000111 7
+b11101010 6
+b1010011 4
+b1010000 3
+b10001001 1
+b11110010 0
+b11110001 .
+b101011 -
+b11010 +
+b1000011 *
+b111011 (
+b1001001 '
+b1101010011100000101110000001111000100111101111111011010001000001000100011001100001011101010100101010111011110001111001010011000001001001010001010111111101110111110111101101101100111001000000101101001010010110100001110101001110001001111100010001101000111011 $
+b1100110100000100110101110100100111101111101001100011011111000111000111110001010001101010010001011111000101011001010100000100010100100011010000110101100000010100111001001111101011011011010100111111100110101111010100101000011110010001010110100001101001001 #
+b1100110100000100110101110100100111101111101001100011011111000111000111110001010001101010010001011111000101011001010100000100010100100011010000110101100000010100111001001111101011011011010100111111100110101111010100101000011110010001010110100001101001001 "
+b1101010011100000101110000001111000100111101111111011010001000001000100011001100001011101010100101010111011110001111001010011000001001001010001010111111101110111110111101101101100111001000000101101001010010110100001110101001110001001111100010001101000111011 !
+$end
+#10
