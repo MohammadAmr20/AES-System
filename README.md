@@ -19,3 +19,7 @@ A module which is responsible for the affine transformation of a byte according 
 A module which is responsible for the Sbox equivalent of each byte in state matrix.
 ![image](https://user-images.githubusercontent.com/42827260/234767974-829fbbc8-e0db-44e6-a652-c2599a0c2495.png)
 
+### Shift Rows
+A module which is responsible for shift rows transformation of the state matrix. It moves the higher bits to lower position and the lower bits to higher positions as shown in the figure.
+
+![image](https://user-images.githubusercontent.com/42827260/234939790-d0cd7c41-4cf5-4564-9904-9520f9bf3ad5.png)
