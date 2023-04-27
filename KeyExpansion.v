@@ -11,7 +11,7 @@ wire [31:0]temp;
 genvar i;
 generate 
 for(i=23;i>=0;i=i-8)begin
-Sbox sb1(datain[i:i-7],temp[i+7:i]);
+Sbox sb1(datain[i:i-7],temp[i+8:i+1]);
 end
 endgenerate
 
