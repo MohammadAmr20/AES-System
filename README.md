@@ -16,4 +16,6 @@ A module which is responsible for the affine transformation of a byte according 
 
 
 ### SubBytes
-A module which is responsible for the affine transformation of a byte according to the following equation.
+A module which is responsible for the Sbox equivalent of each byte in state matrix.
+![image](https://user-images.githubusercontent.com/42827260/234767974-829fbbc8-e0db-44e6-a652-c2599a0c2495.png)
+
