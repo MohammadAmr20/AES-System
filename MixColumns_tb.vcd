@@ -1,0 +1,53 @@
+$date
+	Fri Apr 28 02:20:01 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module MixColumns_tb $end
+$var wire 128 ! out [127:0] $end
+$var reg 128 " in [127:0] $end
+$scope module uut $end
+$var wire 128 # InState [127:0] $end
+$var wire 128 $ OutState [127:0] $end
+$scope function Mult2 $end
+$var reg 8 % x [7:0] $end
+$upscope $end
+$scope function Mult3 $end
+$var reg 8 & x [7:0] $end
+$upscope $end
+$scope begin genblk1[0] $end
+$var parameter 2 ' i $end
+$upscope $end
+$scope begin genblk1[1] $end
+$var parameter 2 ( i $end
+$upscope $end
+$scope begin genblk1[2] $end
+$var parameter 3 ) i $end
+$upscope $end
+$scope begin genblk1[3] $end
+$var parameter 3 * i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 *
+b10 )
+b1 (
+b0 '
+$end
+#0
+$dumpvars
+b10111111 &
+b11010100 %
+b100011001101000000111100101111000001100101100011001100110100100100011111000110100110111101000101000000001100010011001001100 $
+b11010100101111110101110100110000111000001011010001010010101011101011100001000001000100011111000100011110001001111001100011100101 #
+b11010100101111110101110100110000111000001011010001010010101011101011100001000001000100011111000100011110001001111001100011100101 "
+b100011001101000000111100101111000001100101100011001100110100100100011111000110100110111101000101000000001100010011001001100 !
+$end
+#10
