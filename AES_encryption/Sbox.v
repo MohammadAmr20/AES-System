@@ -1,9 +1,9 @@
-module S_box (
-    input [7:0] in,
-    output reg[7:0] out
+module Sbox (
+    input [127:0] in,
+    output [127:0] out
 );
 
-reg [7:0][15:0][15:0] mem  = {
+reg [15:0][15:0][7:0]mem  = {
   {8'h63, 8'h7C, 8'h77, 8'h7B, 8'hF2, 8'h6B, 8'h6F, 8'hC5, 8'h30, 8'h01, 8'h67, 8'h2B, 8'hFE, 8'hD7, 8'hAB, 8'h76},
   {8'hCA, 8'h82, 8'hC9, 8'h7D, 8'hFA, 8'h59, 8'h47, 8'hF0, 8'hAD, 8'hD4, 8'hA2, 8'hAF, 8'h9C, 8'hA4, 8'h72, 8'hC0},
   {8'hB7, 8'hFD, 8'h93, 8'h26, 8'h36, 8'h3F, 8'hF7, 8'hCC, 8'h34, 8'hA5, 8'hE5, 8'hF1, 8'h71, 8'hD8, 8'h31, 8'h15},
@@ -21,7 +21,11 @@ reg [7:0][15:0][15:0] mem  = {
   {8'hE1, 8'hF8, 8'h98, 8'h11, 8'h69, 8'hD9, 8'h8E, 8'h94, 8'h9B, 8'h1E, 8'h87, 8'hE9, 8'hCE, 8'h55, 8'h28, 8'hDF},
   {8'h8C, 8'hA1, 8'h89, 8'h0D, 8'hBF, 8'hE6, 8'h42, 8'h68, 8'h41, 8'h99, 8'h2D, 8'h0F, 8'hB0, 8'h54, 8'hBB, 8'h16}
 };
-
-assign out = mem[in[7:4]][in[3:0]];
+genvar i;
+generate
+    for(i = 0; i < 16 ; i = i + 1)begin
+        assign out[127 - 8 * i: 120 - 8 * i] = mem[15 - in[127 - 8 * i: 124 - 8 * i]][15 - in[123 - 8 * i: 120 - 8 * i]];
+    end
+endgenerate
 
 endmodule

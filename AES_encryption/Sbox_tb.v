@@ -1,8 +1,8 @@
-`include "S_box.v"
-module S_box_tb;
+`include "Sbox.v"
+module Sbox_tb;
     reg [7:0] in ;
     wire [7:0] out;
-    S_box uut(in,out);
+    Sbox uut(in,out);
     initial begin
         $display ("time\t input \t output");
         $monitor ("%g\t %h\t\t %h",$time,in,out);
