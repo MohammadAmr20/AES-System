@@ -1,0 +1,71 @@
+$date
+	Fri Apr 28 01:26:09 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module KeyExpansion_tb $end
+$var wire 128 ! out [127:0] $end
+$var reg 128 " in [127:0] $end
+$var reg 32 # key [31:0] $end
+$scope module uut $end
+$var wire 32 $ cuurentkey [31:0] $end
+$var wire 128 % datain [127:0] $end
+$var wire 32 & temp [31:0] $end
+$var wire 128 ' dataout [127:0] $end
+$scope begin genblk1[7] $end
+$var parameter 4 ( i $end
+$scope module sb1 $end
+$var wire 8 ) in [7:0] $end
+$var reg 8 * out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[15] $end
+$var parameter 5 + i $end
+$scope module sb1 $end
+$var wire 8 , in [7:0] $end
+$var reg 8 - out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin genblk1[23] $end
+$var parameter 6 . i $end
+$scope module sb1 $end
+$var wire 8 / in [7:0] $end
+$var reg 8 0 out [7:0] $end
+$upscope $end
+$upscope $end
+$scope module sb2 $end
+$var wire 8 1 in [7:0] $end
+$var reg 8 2 out [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10111 .
+b1111 +
+b111 (
+$end
+#0
+$dumpvars
+b1 2
+b1001 1
+b10001010 0
+b11001111 /
+b10000100 -
+b1001111 ,
+b11101011 *
+b111100 )
+b10100000111110101111111000010111100010000101010000101100101100010010001110100011001110010011100100101010011011000111011000000101 '
+b10001010100001001110101100000001 &
+b101011011111100001010100010110001010001010111011010010101001101010101111110111000101011000100000001001110011110100111100111100 %
+b1000000000000000000000000 $
+b1000000000000000000000000 #
+b101011011111100001010100010110001010001010111011010010101001101010101111110111000101011000100000001001110011110100111100111100 "
+b10100000111110101111111000010111100010000101010000101100101100010010001110100011001110010011100100101010011011000111011000000101 !
+$end
+#10
