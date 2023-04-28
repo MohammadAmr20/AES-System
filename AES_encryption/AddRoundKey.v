@@ -1,11 +1,11 @@
 
-module AddRoundKey(
-input [127:0]datain1,
-input [127:0]datain2,
-output [127:0]dataout
+module AddRoundKey (
+    input [127:0] datain,
+    input [127:0] key,
+    output [127:0] dataout
 );
 
 
-assign dataout = datain1 ^ datain2;
+assign dataout = datain ^ key;
 
 endmodule

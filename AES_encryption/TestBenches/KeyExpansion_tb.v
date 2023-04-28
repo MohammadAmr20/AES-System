@@ -1,4 +1,4 @@
-`include "KeyExpansion.v"
+`include "../KeyExpansion.v"
 module KeyExpansion_tb;
     reg [255:0] in ;
     reg [31:0] key;
@@ -15,6 +15,7 @@ module KeyExpansion_tb;
         $finish;
     end
 endmodule
+//For 128
 //2b7e151628aed2a6abf7158809cf4f3c
 //a0fafe1788542cb123a339392a6c7605
 //01000000
