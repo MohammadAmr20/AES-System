@@ -1,13 +1,13 @@
-`include "Sbox.v"
-module Sbox_tb;
+`include "InvSbox.v"
+module InvSbox_tb;
     reg [7:0] in ;
     wire [7:0] out;
-    Sbox uut(in,out);
+    InvSbox uut(in,out);
     initial begin
         $display ("time\t input \t output");
         $monitor ("%g\t %h\t\t %h",$time,in,out);
-        $dumpfile("Sbox_tb.vcd");
-        $dumpvars(0,Sbox_tb);
+        $dumpfile("InvSbox_tb.vcd");
+        $dumpvars(0,InvSbox_tb);
         in = 8'h00;
         #1
         in = 8'h23;
