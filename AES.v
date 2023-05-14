@@ -1,6 +1,6 @@
 `include "AES_encryption/Cipher.v"
 `include "AES_decryption/InverseCipher.v"
-module AES #(parameter Nk = 8, parameter Nr = 14) (
+module AES #(parameter Nk = 4, parameter Nr = 10) (
             input [127:0] in,
             input [Nk*32 - 1 : 0] key,
             output reg [127:0] out
