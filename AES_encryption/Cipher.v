@@ -7,7 +7,7 @@ module Cipher #(parameter Nk = 4, parameter Nr = 10)(
                 input [127:0] in,
                 input [Nk*32 - 1:0] key,
                 output [0:Nr][127:0] k_sch,
-                output reg [127:0] out
+                output  [127:0] out
 );
 
 wire [0:Nr][127:0] start;

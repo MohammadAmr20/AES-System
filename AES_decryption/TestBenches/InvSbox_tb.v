@@ -1,4 +1,4 @@
-`include "InvSbox.v"
+`include "../InvSbox.v"
 module InvSbox_tb;
     reg [7:0] in ;
     wire [7:0] out;

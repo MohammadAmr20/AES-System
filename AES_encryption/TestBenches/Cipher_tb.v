@@ -1,12 +1,12 @@
 `include "../Cipher.v"
-module Cipher_tb;
-    reg [127:0] in ;
-    reg [255:0] key;
-    wire [127:0] out;
-    Cipher #(8, 14) cph(in, key, out);
+module Cipher_tb(
+    input [127:0] in ,
+    input [127:0] key,
+    output [0:10][127:0] k_Sch,
+    output [127:0] out
+);
+    Cipher #(4,10) cph(in,key,k_sch,out);
     initial begin
-        $dumpfile("Cipher_tb.vcd");
-        $dumpvars(0,Cipher_tb);
         $display ("time\t input \t\t\t\t\t\t\t\t output");
         $monitor ("%g\t %h\t\t %h",$time,in,out);
         #10
