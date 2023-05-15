@@ -1,14 +1,17 @@
-`include "../Cipher.v"
-module Cipher_tb(
-    input [127:0] in ,
-    input [127:0] key,
-    output [0:10][127:0] k_Sch,
-    output [127:0] out
-);
+module Cipher_tb;
+
+   reg [127:0] in ;
+   reg [127:0] key;
+   wire [127:0] k_Sch [0:10];
+   wire [127:0] out;
+
+
     Cipher #(4,10) cph(in,key,k_sch,out);
     initial begin
         $display ("time\t input \t\t\t\t\t\t\t\t output");
         $monitor ("%g\t %h\t\t %h",$time,in,out);
+	in= 128'h3243f6a8885a308d313198a2e0370734;
+	key= 128'h2b7e151628aed2a6abf7158809cf4f3c;
         #10
         $finish;
     end
