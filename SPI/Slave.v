@@ -1,4 +1,3 @@
-`include "../AES.v"
 module Slave #(parameter Nk = 4, parameter Nr = 10)(
                 input clk,
                 input SIMO,

@@ -52,7 +52,7 @@ endfunction
 
 genvar i;
 generate
-    for(i = 0; i < 4; i = i + 1) begin
+    for(i = 0; i < 4; i = i + 1) begin : mix1
         assign data_out[(127 - 32 * i)-:8] = Mult0e(data_in[(127 - 32 * i)-:8]) ^ Mult0b(data_in[(119 - 32 * i)-:8])
         ^ Mult0d(data_in[(111 - 32 * i)-:8]) ^ Mult9(data_in[(103 - 32 * i)-:8]);
         assign data_out[(119 - 32 * i)-:8] = Mult9(data_in[(127 - 32 * i)-:8]) ^ Mult0e(data_in[(119 - 32 * i)-:8])

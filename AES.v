@@ -1,17 +1,15 @@
-`include "AES_encryption/Cipher.v"
-`include "AES_decryption/InverseCipher.v"
 module AES #(parameter Nk = 4, parameter Nr = 10) (
             input [127:0] in,
             input [Nk*32 - 1 : 0] key,
-            output reg [127:0] out
+            output [127:0] out
 );
 wire [127:0] encrypt;
-wire [0:Nr][127:0] k_sch;
+wire [128 * (Nr + 1) - 1:0] key_out;
 wire [127:0] decrypt;
 
-Cipher #(Nk, Nr) cipher (in, key, k_sch, encrypt);
+Cipher #(Nk, Nr) cipher (in, key, key_out, encrypt);
 
-InverseCipher #(Nk, Nr) inv_cipher (encrypt, k_sch, decrypt);
+InverseCipher #(Nk, Nr) inv_cipher (encrypt, key_out, decrypt);
 
 assign out = decrypt;
 

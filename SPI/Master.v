@@ -1,4 +1,3 @@
-`include "Slave.v"
 module Master (
                 input clk,
                 input reset,
@@ -42,25 +41,31 @@ always @(posedge fake_clk) begin
         decryption <= 128'h0;
         led <= 1'b0;
     end
-    else if (!CS) begin
+	 else begin
+		  CS <= 1'b0;
+	 end
+    if (!CS) begin
         if (i < 129) begin
-            MOSI = msg[i];
-            i = i + 1;
+            MOSI <= msg[i];
+            i <= i + 1;
         end
         else if (i < (130 + 32 * Nk)) begin
-            MOSI = key[i - 129];
-            i = i + 1;
+            MOSI <= key[i - 129];
+            i <= i + 1;
         end
+        else if (i >= 130 + 32 * Nk && mode == encr) begin
+					      mode <= decr;
+            end
         else if (mode == decr && j < 129) begin
             decryption <= {MISO, decryption[127:1]};
-            j = j + 1;
+            j <= j + 1;
         end
+		  else if (decryption == msg) begin
+				led <= 1'b1;
+		  end
     end
 end
 
 Slave #(Nk, Nr) slave (fake_clk, MOSI, CS, mode, MISO);
-assign mode = (i >= 130 + 32 * Nk) ? decr : encr;
-assign led = (decryption == msg) ? 1'b1 : 1'b0;
-assign CS = (!reset) ? 1'b0 : 1'b1;
 
 endmodule

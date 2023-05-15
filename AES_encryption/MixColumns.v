@@ -22,7 +22,7 @@ endfunction
 
 genvar i;
 generate
-    for(i = 0; i < 4; i = i + 1) begin
+    for(i = 0; i < 4; i = i + 1) begin :p1
         assign OutState[(127 - 32 * i)-:8] = Mult2(InState[(127 - 32 * i)-:8]) ^ Mult3(InState[(119 - 32 * i)-:8])
         ^ InState[(111 - 32 * i)-:8] ^ InState[(103 - 32 * i)-:8];
         assign OutState[(119 - 32 * i)-:8] = InState[(127 - 32 * i)-:8] ^ Mult2(InState[(119 - 32 * i)-:8])
