@@ -29,6 +29,7 @@ module Master_tb;
         #1000
         reset = 1'b0;
         #535000
+        reset = 1'b1;
         $finish;
 end
     

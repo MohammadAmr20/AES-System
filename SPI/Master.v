@@ -74,7 +74,7 @@ always @(posedge fake_clk) begin
             MOSI <= msg[i];
             i <= i + 1;
         end
-        else if (size == 2'b00) begin
+        else if (size == 2'b00 && j < 129) begin
             if (i < (130 + 32 * 4)) begin
                 MOSI <= key[128 + i - 129];
                 i <= i + 1;
@@ -82,12 +82,12 @@ always @(posedge fake_clk) begin
             else if (i >= 130 + 32 * 4 && mode == encr) begin
 				    	      mode <= decr;
                 end
-            else if (mode == decr && j < 129) begin
+            else if (mode == decr) begin
                 decryption <= {MISO, decryption[127:1]};
                 j <= j + 1;
             end
         end
-        else if (size == 2'b01) begin
+        else if (size == 2'b01 && j < 129) begin
             if (i < (130 + 32 * 6)) begin
                 MOSI <= key[64 + i - 129];
                 i <= i + 1;
@@ -95,12 +95,12 @@ always @(posedge fake_clk) begin
             else if (i >= 130 + 32 * 6 && mode == encr) begin
 				    	      mode <= decr;
                 end
-            else if (mode == decr && j < 129) begin
+            else if (mode == decr) begin
                 decryption <= {MISO, decryption[127:1]};
                 j <= j + 1;
             end
         end
-        else if (size == 2'b10) begin
+        else if (size == 2'b10 && j < 129) begin
             if (i < (130 + 32 * 8)) begin
                 MOSI <= key[i - 129];
                 i <= i + 1;
@@ -108,7 +108,7 @@ always @(posedge fake_clk) begin
             else if (i >= 130 + 32 * 8 && mode == encr) begin
 				    	      mode <= decr;
                 end
-            else if (mode == decr && j < 129) begin
+            else if (mode == decr) begin
                 decryption <= {MISO, decryption[127:1]};
                 j <= j + 1;
             end
