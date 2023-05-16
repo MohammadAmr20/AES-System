@@ -16,6 +16,7 @@ integer j = 0;
 wire [127:0] decrypt;
 integer Nk = (size == 2'b00) ? 4 : (size == 2'b01) ? 6 : 8;
 integer Nr = (size == 2'b00) ? 10 : (size == 2'b01) ? 12 : 14;
+wire [127:0] decrypt [2:0];
 
 localparam encr = 1'b0;
 localparam decr = 1'b1;
@@ -50,7 +51,7 @@ always @(posedge clk) begin
     end
 end
 
-AES #(4, 10) aes (msg, key, mode, size, decrypt);
+AES #(Nk, Nr) aes (msg, key, decrypt);
 
 
 endmodule
