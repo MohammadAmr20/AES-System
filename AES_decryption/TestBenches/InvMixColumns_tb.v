@@ -1,5 +1,5 @@
-`include "InvMixColumns.v"
-module InvMixColumns_tb;
+`include "../InvMixColumns.v"
+module InvMixColumns_tb();
     reg [127:0] in ;
     wire [127:0] out;
     InvMixColumns  uut(in,out);

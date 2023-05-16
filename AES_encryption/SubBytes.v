@@ -1,4 +1,3 @@
-`include "Sbox.v"
 module SubBytes (
     input [127:0] InState ,
     output [127:0] OutState

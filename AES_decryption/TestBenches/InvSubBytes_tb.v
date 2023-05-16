@@ -1,4 +1,4 @@
-`include "InvSubBytes.v"
+`include "../InvSubBytes.v"
 module InvSubBytes_tb;
     reg [127:0] in ;
     wire [127:0] out;
