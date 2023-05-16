@@ -3,8 +3,8 @@ module Master (
                 input reset,
 				        input enable,
                 input [1:0] size,
-                output led,
-                output reg leds
+                output led_fin,
+                output reg led_decryption
 );
 
 localparam encr = 1'b0;
@@ -46,7 +46,7 @@ always @(posedge fake_clk) begin
         i <= 0;
         j <= 0;
         CS <= 1'b1;
-        leds <= 1'b0;
+        led_decryption <= 1'b0;
         MOSI <= 1'b0;
         mode <= encr;
         key1 <= 128'h2b7e151628aed2a6abf7158809cf4f3c;
@@ -57,7 +57,7 @@ always @(posedge fake_clk) begin
         decryption <= 128'h0;
 		    similar <= 1'b1;
     end
-	  else if (!reset && CS) begin
+	  else if (CS) begin
 		    CS <= 1'b0;
         if (size == 2'b00) begin
             key[255 -: 128] <= key1;
@@ -114,7 +114,7 @@ always @(posedge fake_clk) begin
             end
         end
 		    else if (decryption ^ msg == 0) begin
-				    leds <= 1'b1;
+				    led_decryption <= 1'b1;
 		    end
     end
   end
@@ -122,6 +122,6 @@ end
 
 Slave slave (fake_clk, reset, MOSI, CS, mode, size, MISO);
 
-assign led = (j == 129) ? 1'b1 : 1'b0;
+assign led_fin = (j >= 129) ? 1'b1 : 1'b0;
 
 endmodule

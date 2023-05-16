@@ -18,6 +18,18 @@ module Master_tb;
 	enable = 1'b1;
         #1000
         reset = 1'b0;
+        #395000
+        reset = 1'b1;
+        size = 2'b01;
+        #1000
+        reset = 1'b0;
+        #460000
+        reset = 1'b1;
+        size = 2'b10;
+        #1000
+        reset = 1'b0;
+        #535000
+        $finish;
 end
     
 endmodule

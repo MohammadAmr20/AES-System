@@ -46,7 +46,7 @@ generate
         KeyExpansion #(8) key_exp3 (keys3[8*32*(11 - i) - 1 -: 8*32], Rcon[i][31:0], keys3[8*32*(10 - i) - 1 -: 8*32]);
     end
     for (i = 0; i <= 14; i = i + 1) begin : to_block
-        assign k_sch[i] = (size == 2'b00) ? keys1[4*32*11 - 1 - 128*i -: 128] : (size == 2'b01) ? keys2[6*32*11 - 1 - 128*i -: 128] : keys3[8*32*11 - 1 - 128*i -: 128];
+        assign k_sch[i] = (size == 2'b00 && i < 11) ? keys1[4*32*11 - 1 - 128*i -: 128] : (size == 2'b01 && i < 13) ? keys2[6*32*11 - 1 - 128*i -: 128] : keys3[8*32*11 - 1 - 128*i -: 128];
     end
 
 
