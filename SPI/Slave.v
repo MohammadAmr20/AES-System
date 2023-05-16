@@ -14,7 +14,7 @@ integer i;
 integer j;
 
 wire [127:0] decrypt_final;
-wire [127:0] decrypt [0:2];
+wire [127:0] decrypt;
 
 localparam encr = 1'b0;
 localparam decr = 1'b1;
@@ -59,10 +59,8 @@ always @(posedge clk) begin
     end
 end
 
-AES #(4, 10) aes1 (msg, key[255 -: 128], decrypt[0]);
-AES #(6, 12) aes2 (msg, key[255 -: 192], decrypt[1]);
-AES #(8, 14) aes3 (msg, key[255 -: 256], decrypt[2]);
+AES aes1 (msg, key, mode, size, decrypt);
 
-assign decrypt_final = (reset) ? 0 : (size == 2'b00) ? decrypt[0] : (size == 2'b01) ? decrypt[1] : decrypt[2];
+assign decrypt_final = (reset) ? 0 : decrypt;
 
 endmodule
