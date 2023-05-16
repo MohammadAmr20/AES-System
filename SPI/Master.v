@@ -3,7 +3,7 @@ module Master (
                 input reset,
 		input enable,
                 output reg led_dec,
-		output reg led_fin
+		output led_fin
 );
 
 localparam Nk = 4;
@@ -48,7 +48,6 @@ always @(posedge fake_clk) begin
         key <= 128'h2b7e151628aed2a6abf7158809cf4f3c;
         msg <= 128'h3243f6a8885a308d313198a2e0370734;
         decryption <= 128'h0;
-        led_fin <= 1'b0;
 	led_dec <= 1'b0;
     end
     else if (!CS) begin
