@@ -9,8 +9,8 @@ module Slave #(parameter Nk = 4, parameter Nr = 10)(
 reg [127:0] msg;
 reg [Nk*32 - 1:0] key;
 
-integer i = 0;
-integer j = 0;
+integer i ;
+integer j ;
 
 wire [127:0] decrypt ;
 
@@ -18,6 +18,8 @@ localparam encr = 1'b0;
 localparam decr = 1'b1;
 always @(posedge clk) begin
  if(reset)begin
+ j <= 0 ;
+ i <= 0 ;
  msg <= 0 ;
  key <= 0 ;
  SOMI <= 0 ;
