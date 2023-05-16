@@ -1,6 +1,6 @@
 module Slave #(parameter Nk = 4, parameter Nr = 10)(
                 input clk,
-		input reset,
+					 input reset,
                 input SIMO,
                 input CSS,
                 input mode,

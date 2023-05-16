@@ -1,8 +1,9 @@
 module Master (
                 input clk,
                 input reset,
-		input enable,
-                output reg led
+				input enable,
+                output led,
+                output reg leds
 );
 
 localparam Nk = 4;
@@ -21,6 +22,7 @@ reg mode;
 reg [127:0] decryption;
 reg [127:0] msg;
 reg [Nk*32 - 1:0] key;
+reg similar;
 
 
 always @(posedge clk) begin
@@ -42,17 +44,18 @@ always @(posedge fake_clk) begin
         i <= 0;
         j <= 0;
         CS <= 1'b1;
+        leds <= 1'b0;
         MOSI <= 1'b0;
         mode <= encr;
         key <= 128'h2b7e151628aed2a6abf7158809cf4f3c;
         msg <= 128'h3243f6a8885a308d313198a2e0370734;
         decryption <= 128'h0;
-        led <= 1'b0;
+		  similar <= 1'b1;
     end
-	 else begin
+	 else if (!reset && CS) begin
 		  CS <= 1'b0;
 	 end
-    if (!CS) begin
+    else if (!CS) begin
         if (i < 129) begin
             MOSI <= msg[i];
             i <= i + 1;
@@ -68,13 +71,15 @@ always @(posedge fake_clk) begin
             decryption <= {MISO, decryption[127:1]};
             j <= j + 1;
         end
-		  else if (decryption == msg) begin
-				led <= 1'b1;
-		  end
+		else if (decryption == msg) begin
+				leds <= 1'b1;
+		end
     end
   end
 end
 
-Slave #(Nk, Nr) slave (fake_clk,reset, MOSI, CS, mode, MISO);
+Slave #(Nk, Nr) slave (fake_clk, reset, MOSI, CS, mode, MISO);
+
+assign led = (j == 129) ? 1'b1 : 1'b0;
 
 endmodule
