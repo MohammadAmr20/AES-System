@@ -1,6 +1,7 @@
 module InverseCipher #(parameter Nk = 4, parameter Nr = 10)(
                 input [127:0] in,
                 input [128 * (Nr + 1) - 1:0] key_out,
+                input [1:0] size,
                 output [127:0] out
 );
 

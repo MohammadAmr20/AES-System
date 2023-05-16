@@ -1,22 +1,17 @@
-module AES (
+module AES #(parameter Nk = 4, parameter Nr = 10) (
             input [127:0] in,
-            input [255 : 0] key,
-	          input mode,
-            input [1:0] size,
+            input [Nk*32 - 1 : 0] key,
             output [127:0] out
 );
+wire [127:0] encrypt;
+wire [128 * (Nr + 1) - 1:0] key_out;
+wire [127:0] decrypt;
 
-wire [127:0] encrypt ;
-wire [128 * (14 + 1) - 1:0] key_out ;
-wire [127:0] decrypt ;
+Cipher #(Nk, Nr) cipher (in, key, key_out, encrypt);
 
+InverseCipher #(Nk, Nr) inv_cipher (encrypt, key_out, decrypt);
 
-Cipher cipher (in, key, key_out, encrypt);
-
-InverseCipher inv_cipher (encrypt, key_out, decrypt);
-
-
-assign out = (mode==1'b1) ? decrypt : 128'b0 ;
+assign out = decrypt;
 
 endmodule
 

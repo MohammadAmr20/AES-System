@@ -14,6 +14,7 @@ module Master_tb;
         clk = 1'b0;
 	#100
         reset = 1'b1;
+        size = 2'b00;
 	enable = 1'b1;
         #1000
         reset = 1'b0;
