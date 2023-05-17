@@ -44,10 +44,6 @@ always @(posedge clk) begin
                     key <= {SIMO, key[255:1]};
                     i <= i + 1;
                 end
-                else if (i < (130 + 8*32) && size == 2'b10) begin
-                    key <= {SIMO, key[255:1]};
-                    i <= i + 1;
-                end
             end
             else if(mode == decr)begin
                 if(j<129)begin

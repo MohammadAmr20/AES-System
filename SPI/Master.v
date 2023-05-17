@@ -100,19 +100,6 @@ always @(posedge fake_clk) begin
                 j <= j + 1;
             end
         end
-        else if (size == 2'b10 && j < 129) begin
-            if (i < (130 + 32 * 8)) begin
-                MOSI <= key[i - 129];
-                i <= i + 1;
-            end
-            else if (i >= 130 + 32 * 8 && mode == encr) begin
-				    	      mode <= decr;
-                end
-            else if (mode == decr) begin
-                decryption <= {MISO, decryption[127:1]};
-                j <= j + 1;
-            end
-        end
 		    else if (decryption ^ msg == 0) begin
 				    led_decryption <= 1'b1;
 		    end

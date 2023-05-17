@@ -7,7 +7,7 @@ module AES (
 );
 
 wire [127:0] encrypt ;
-wire [128 * (14 + 1) - 1:0] key_out ;
+wire [128 * (12 + 1) - 1:0] key_out ;
 wire [127:0] decrypt ;
 
 
